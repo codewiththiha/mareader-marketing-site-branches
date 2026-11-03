@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Mareader — a calm reader for PDFs and EPUBs</title>
+    <meta name="description" content="Mareader reads PDFs and EPUBs in your own colours, up to four books side by side, with AI and voices that can stay on your computer. Free and open source." />
+    <meta name="theme-color" content="#f6f1e8" />
+    <script>
+      try {
+        var t = localStorage.getItem("mr-site");
+        if (t !== "light" && t !== "dark") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
